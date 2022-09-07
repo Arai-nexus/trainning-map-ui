@@ -1,22 +1,88 @@
-/* 日本地図DOM */
-.japan_map{
+body {
+    width: 100%;
+    font-size: 16px;
+    height: 1300px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .space-between {
+    justify-content: space-between;
+  }
+  
+  #open,
+  #close {
+    cursor: pointer;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px;
+    margin: 16px auto 0;
+    background: #4caf50;
+    color: white;
+    position: relative;
+    top: 30%;
+  }
+  
+  #mask {
+    /* 日本地図DOM */
     position: relative;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
     display: table;
     background-color: #adf6ff;
-}
+
+    /* background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1; */
+  }
+  
+  #modal {
+    background: #fff;
+    color: #555;
+    border-radius: 4px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    margin: 0 auto;
+    z-index: 2;
+  }
+  
+  #modal p {
+    margin: 0 0 20px;
+  }
+  
+  #mask .hidden {
+    display: none;
+  }
+  
+  #modal.hidden {
+    display: none;
+  }
 
 /* 日本地図画像（スマホ対応用） */
-.japan_map img{
-    max-width: 100%;
+#modal img{
+    box-sizing: border-box;
+    width: 100%;
     height: auto;
     border: 0;
     -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* 日本地図ボタン */
-.japan_map .area_btn{
+#modal .area_btn{
     position: absolute;
     z-index: 1;
     box-sizing: border-box;
@@ -31,97 +97,104 @@
 }
 
 /* ボタン配置（使用する日本地図画像により微調整） */
-.japan_map .area_btn.area1{
+#modal .area_btn.area1{
     top: 8%;
     right: 9%;
     width: 10%;
 }
 
-.japan_map .area_btn.area2{
+#modal .area_btn.area2{
     top: 32%;
     right: 12%;
     width: 10%;
 }
 
-.japan_map .area_btn.area3{
+#modal .area_btn.area3{
     top: 64%;
     right: 11%;
     width: 13%;
 }
 
-.japan_map .area_btn.area4{
+#modal .area_btn.area4{
     top: 65%;
     right: 27%;
     width: 13%;
 }
 
-.japan_map .area_btn.area5{
+#modal .area_btn.area5{
     top: 73%;
     right: 42%;
     width: 13%;
 }
 
-.japan_map .area_btn.area6{
+#modal .area_btn.area6{
     top: 62%;
     left: 27%;
     width: 13%;
 }
 
-.japan_map .area_btn.area7{
+#modal .area_btn.area7{
     top: 80%;
     left: 26%;
     width: 15%;
 }
 
-.japan_map .area_btn.area8{
+#modal .area_btn.area8{
     top: 70%;
     left: 0;
     width: 25%;
 }
 
 /* オーバーレイ */
-.japan_map .area_overlay{
+#modal .area_overlay{
     display: none;
     position: absolute;
     z-index: 2;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 50%;
+    min-height: 50%;
     width: auto;
     height: auto;
-    background-color: #111;
+    background-color: transparent;
     opacity: 0.5;
     cursor: pointer;
 }
 
 /* 選択前は表示を隠す */
-.japan_map .pref_area{
+#modal .pref_area{
     display: none;
 }
 
 /* 地域毎の都道府県リスト */
-.japan_map .pref_list{
+#modal .pref_list{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: rgb(253, 144, 1);
-    transform: translateY(-50%) translateX(-50%);
-    -webkit-transform: translateY(-50%) translateX(-50%);
+    top: 0%;
+    left: 0%;
+    background-color:  #FFF;
+    /* transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%); */
     z-index: 3;
     box-sizing: border-box;
     display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 90%;
+    width: 50%;
+    transition: .5s; /* ← 追加 */
 }
 
-.japan_map .choose {
+#modal .choose {
     display: block;
+    min-width: 100%;
 }
 
-.japan_map .pref_list > div{
+#modal .area {
+    display: block;
+    min-width: 100%;
+}
+
+#modal .pref_list > div{
     box-sizing: border-box;
     width: 50%;
     border: 1px solid #CCC;
@@ -129,11 +202,48 @@
     text-align: center;
     padding: 0.5em;
     cursor: pointer;
+    transition: .5s; /* ← 追加 */
 }
+
+/*----------------------------
+scroll_left ｜左から出現
+----------------------------*/
+/* .scroll_left {
+    -webkit-transition: 0.8s ease-in-out;
+    -moz-transition: 0.8s ease-in-out;
+    -o-transition: 0.8s ease-in-out;
+    transition: 0.8s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+}
+.scroll_left.on {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+    -moz-opacity: 1.0;
+    transform: translateX(0);
+} */
 
 @media screen and (max-width: 480px){
     /* スマホユーザー向けにボタン文字サイズを調整 */
-    .japan_map .area_btn{
+    #modal .area_btn{
         font-size: 4vw;
+    }
+
+    /* オーバーレイ */
+    #modal .area_overlay{
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        min-width: 50%;
+        min-height: 50%;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        opacity: 0.5;
+        cursor: pointer;
     }
 }
