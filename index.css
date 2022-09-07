@@ -32,36 +32,48 @@
 
 /* ボタン配置（使用する日本地図画像により微調整） */
 .japan_map .area_btn.area1{
-    top: 30%;
-    right: 0;
-    width: 30%;
+    top: 8%;
+    right: 9%;
+    width: 10%;
 }
 
 .japan_map .area_btn.area2{
-    top: 58%;
-    right: 11%;
-    width: 13%;
+    top: 32%;
+    right: 12%;
+    width: 10%;
 }
 
 .japan_map .area_btn.area3{
-    top: 56%;
-    right: 27.5%;
+    top: 64%;
+    right: 11%;
     width: 13%;
 }
 
 .japan_map .area_btn.area4{
     top: 65%;
-    right: 44%;
+    right: 27%;
     width: 13%;
 }
 
 .japan_map .area_btn.area5{
-    top: 52%;
-    left: 20%;
-    width: 25%;
+    top: 73%;
+    right: 42%;
+    width: 13%;
 }
 
 .japan_map .area_btn.area6{
+    top: 62%;
+    left: 27%;
+    width: 13%;
+}
+
+.japan_map .area_btn.area7{
+    top: 80%;
+    left: 26%;
+    width: 15%;
+}
+
+.japan_map .area_btn.area8{
     top: 70%;
     left: 0;
     width: 25%;
@@ -93,6 +105,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    background-color: rgb(253, 144, 1);
     transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
     z-index: 3;
@@ -102,7 +115,10 @@
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     width: 90%;
-    background-color: #FFF;
+}
+
+.japan_map .choose {
+    display: block;
 }
 
 .japan_map .pref_list > div{
