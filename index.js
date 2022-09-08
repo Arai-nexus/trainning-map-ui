@@ -20,11 +20,16 @@
 }
 
 $(function () {
+  $("#open").click(function () {
+    console.log("OK");
+  });
+
   //地域を選択
   $(".area_btn").click(function () {
     $(".area_overlay").show();
     $(".pref_area").show();
     let area = $(this).data("area");
+    console.log(area);
     $("[data-list]").hide();
     $('[data-list="' + area + '"]').show();
   });
