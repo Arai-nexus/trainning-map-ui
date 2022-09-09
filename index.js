@@ -1,27 +1,37 @@
 "use strict";
-{
-  const open = document.getElementById("open");
-  const close = document.getElementById("close");
-  const modal = document.getElementById("modal");
-  const mask = document.getElementById("mask");
+// {
+//   const open = document.getElementById("open");
+//   const modal = document.getElementById("modal");
+//   const mask = document.getElementById("mask");
 
-  open.addEventListener("click", function () {
-    modal.classList.remove("hidden");
-    mask.classList.remove("hidden");
-  });
-  close.addEventListener("click", function () {
-    modal.classList.add("hidden");
-    mask.classList.add("hidden");
-  });
-  mask.addEventListener("click", function () {
-    modal.classList.add("hidden");
-    mask.classList.add("hidden");
-  });
-}
+//   open.addEventListener("click", function () {
+//     modal.classList.remove("hidden");
+//     mask.classList.remove("hidden");
+//   });
+
+//   mask.addEventListener("click", function () {
+//     modal.classList.add("hidden");
+//     mask.classList.add("hidden");
+//   });
+// }
 
 $(function () {
-  $("#open").click(function () {
-    console.log("OK");
+  // open.addEventListener("click", function () {
+  //   modal.classList.remove("hidden");
+  //   mask.classList.remove("hidden");
+  // });
+  $("#open").click(() => {
+    $("#modal").show();
+    $("#mask").show();
+  });
+
+  // mask.addEventListener("click", function () {
+  //   modal.classList.add("hidden");
+  //   mask.classList.add("hidden");
+  // });
+  $("#mask").click(() => {
+    $("#modal").hide();
+    $("#mask").hide();
   });
 
   //地域を選択
@@ -29,7 +39,6 @@ $(function () {
     $(".area_overlay").show();
     $(".pref_area").show();
     let area = $(this).data("area");
-    console.log(area);
     $("[data-list]").hide();
     $('[data-list="' + area + '"]').show();
   });
