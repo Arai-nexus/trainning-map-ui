@@ -163,6 +163,7 @@ html {
         transform: translateY(-50%) translateX(-50%);
         -webkit-transform: translateY(-50%) translateX(-50%);
         z-index: 1;
+        /* display: -webkit-flex;
         display: flex;
         -webkit-flex-wrap: wrap; */
         flex-wrap: wrap;
@@ -297,7 +298,7 @@ html {
         border-radius: 5px;
         background-color: #FFF;
         padding: 0.2em auto;
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: bold;
         text-align: center;
         white-space: nowrap;
@@ -400,6 +401,7 @@ html {
 
     .japan_map .area {
         min-width: 100%;
+        font-size: 2rem;
         border-bottom: 1px solid rgb(122, 120, 120);
         margin-bottom: 5px;
     }
@@ -513,8 +515,6 @@ html {
 
     /* ボタン配置（使用する日本地図画像により微調整） */
     .japan_map .area_btn.area1{
-        /* color: rgb(60, 42, 216);
-        border: solid 2px rgb(60, 42, 216); */
         top: 20%;
         right: 36%;
         min-width: 1.5rem;
@@ -622,6 +622,7 @@ html {
 
     .japan_map .area {
         min-width: 100%;
+        font-size: 2rem;
         border-bottom: 1px solid rgb(122, 120, 120);
         margin-bottom: 5px;
     }
