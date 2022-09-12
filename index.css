@@ -163,22 +163,16 @@ html {
         transform: translateY(-50%) translateX(-50%);
         -webkit-transform: translateY(-50%) translateX(-50%);
         z-index: 1;
-        /* display: -webkit-flex;
         display: flex;
         -webkit-flex-wrap: wrap; */
         flex-wrap: wrap;
-
-
         box-sizing: border-box;
         border: 1px solid #ccc;
         font-weight: bold;
         text-align: center;
         padding: 0.5em;
-
-
         min-height: 50%;
         background-color: rgb(241, 239, 239);
-        
         cursor: pointer;
         z-index: 111;
         animation-name: popup;
@@ -303,6 +297,7 @@ html {
         border-radius: 5px;
         background-color: #FFF;
         padding: 0.2em auto;
+        font-size: 2rem;
         font-weight: bold;
         text-align: center;
         white-space: nowrap;
@@ -347,7 +342,7 @@ html {
     }
 
     #modal .area_btn.area8{
-        top: 65%;
+        top: 70%;
         left: 2%;
     }
 
@@ -510,7 +505,7 @@ html {
         border-radius: 5px;
         background-color: #FFF;
         padding: 0.2em auto;
-        font-size: 2rem;
+        font-size: 2.5rem;
         font-weight: bold;
         text-align: center;
         white-space: nowrap;
@@ -556,8 +551,8 @@ html {
     }
 
     #modal .area_btn.area8{
-        top: 73%;
-        left: 10%;
+        top: 70%;
+        left: 5%;
     }
 
     /* オーバーレイ */
