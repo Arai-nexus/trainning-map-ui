@@ -21,7 +21,8 @@ $(function () {
   //   mask.classList.remove("hidden");
   // });
   $("#open").click(() => {
-    $("#modal").show();
+    $("#open").hide();
+    $("#japan_map").show();
     $("#mask").show();
   });
 
@@ -30,7 +31,8 @@ $(function () {
   //   mask.classList.add("hidden");
   // });
   $("#mask").click(() => {
-    $("#modal").hide();
+    $("#open").show();
+    $("#japan_map").hide();
     $("#mask").hide();
   });
 

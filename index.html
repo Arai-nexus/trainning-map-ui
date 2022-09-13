@@ -18,19 +18,23 @@
     <main>
         <div id="open">mapから選択</div>
         <div id="mask" class="hidden"></div>
-        <div id="modal" class="hidden">
-        <div class="japan_map">
-            <img class="sp" src="./japan-map-sp-square.png" alt="日本地図">
-            <img class="pc" src="./japan-map-pc-square.png" alt="日本地図">
-            <span class="area_btn area1" data-area="1">Hokkaido</span>
-                <span class="area_btn area2" data-area="2">Tohoku</span>
-                <span class="area_btn area3" data-area="3">Kanto</span>
-                <span class="area_btn area4" data-area="4">Chubu</span>
-                <span class="area_btn area5" data-area="5">Kinki</span>
-                <span class="area_btn area6" data-area="6">Shikoku</span>
-                <span class="area_btn area7" data-area="7">Chugoku</span>
-                <span class="area_btn area8" data-area="8">Kyusyu/Okinawa</span>
-            
+        <div id="japan_map" class="hidden">
+            <div class="map-header">
+                <div class="information">Select Location</div>
+                <div class="close">×</div>
+            </div>
+            <div class="guidance">\都道府県を選択してください/</div>
+            <img class="sp" src="./assets/japan-map-sp.png" alt="日本地図">
+            <img class="pc" src="./assets/japan-map-pc.png" alt="日本地図">
+                <div class="area_btn area1" data-area="1">Hokkaido</div>
+                <!-- <div class="area_btn area2" data-area="2">Tohoku</div>
+                <div class="area_btn area3" data-area="3">Kanto</div>
+                <div class="area_btn area4" data-area="4">Chubu</div>
+                <div class="area_btn area5" data-area="5">Kinki</div>
+                <div class="area_btn area6" data-area="6">Shikoku</div>
+                <div class="area_btn area7" data-area="7">Chugoku</div>
+                <div class="area_btn area8" data-area="8">Kyusyu/Okinawa</div>
+             -->
             <div class="area_overlay"></div>
             <div class="pref_area">
                 <div class="pref_list" data-list="1">
