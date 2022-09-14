@@ -15,7 +15,7 @@ html {
 /**
   * SPレスポンシブ
   */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 599px) {
   #open {
     width: 200px;
     border: 1px solid #ccc;
@@ -64,8 +64,8 @@ html {
     z-index: 1;
     box-sizing: border-box;
     margin: 0 auto;
-    min-width: 100%;
-    background-color: #adf6ff;
+    min-width: 90%;
+    background-color: var.$mapColor;
 
     .map-header {
       background: var.$mainColor;
@@ -77,9 +77,24 @@ html {
       }
     }
 
+    .information {
+      color: var.$subColor;
+      font-weight: bold;
+      padding: 5px 10px;
+    }
+
+    .information {
+      color: var.$subColor;
+      font-weight: bold;
+      padding: 5px 10px;
+    }
+
     .guidance {
+      background-color: var.$subColor;
       text-align: center;
-      background: #fff;
+      width: 100%;
+      font-weight: bold;
+      padding: 5px 0;
     }
 
     .map {
@@ -96,6 +111,10 @@ html {
         display: none;
       }
 
+      .area_btn:hover {
+        background-color: var.$subColor;
+      }
+
       /* 日本地図ボタン */
       /* ボタン配置（使用する日本地図画像により微調整） */
       .area1 {
@@ -104,7 +123,7 @@ html {
         border: solid 3px var.$hokkaidoColor;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         font-size: 4vw;
         font-weight: bold;
@@ -113,6 +132,11 @@ html {
         top: 5%;
         right: 40%;
         cursor: pointer;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$hokkaidoColor;
+        }
       }
 
       .area2 {
@@ -121,7 +145,7 @@ html {
         border: solid 3px var.$tohokuColor;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         font-size: 4vw;
         font-weight: bold;
@@ -130,6 +154,11 @@ html {
         top: 30%;
         right: 8%;
         cursor: pointer;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$tohokuColor;
+        }
       }
 
       .area3 {
@@ -138,7 +167,7 @@ html {
         border: solid 3px var.$kantoColor;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         font-size: 4vw;
         font-weight: bold;
@@ -147,6 +176,11 @@ html {
         top: 53%;
         right: 14%;
         cursor: pointer;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$kantoColor;
+        }
       }
 
       .area4 {
@@ -155,7 +189,7 @@ html {
         border: solid 3px var.$chubuColor;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         font-size: 4vw;
         font-weight: bold;
@@ -164,6 +198,11 @@ html {
         top: 34%;
         left: 34%;
         cursor: pointer;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$chubuColor;
+        }
       }
 
       .area5 {
@@ -172,7 +211,7 @@ html {
         border: solid 3px var.$kinkiColor;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         font-size: 4vw;
         font-weight: bold;
@@ -181,6 +220,11 @@ html {
         top: 66%;
         right: 40%;
         cursor: pointer;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$kinkiColor;
+        }
       }
 
       .area6 {
@@ -189,7 +233,7 @@ html {
         border: solid 3px var.$shikokuColor;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         font-size: 4vw;
         font-weight: bold;
@@ -198,6 +242,11 @@ html {
         top: 75%;
         left: 26%;
         cursor: pointer;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$shikokuColor;
+        }
       }
 
       .area7 {
@@ -206,7 +255,7 @@ html {
         border: solid 3px var.$chugokuColor;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         font-size: 4vw;
         font-weight: bold;
@@ -215,6 +264,11 @@ html {
         top: 46%;
         left: 4%;
         cursor: pointer;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$chugokuColor;
+        }
       }
 
       .area8 {
@@ -223,7 +277,7 @@ html {
         border: solid 3px var.$kyusyuOkinawaColor;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         font-size: 4vw;
         font-weight: bold;
@@ -232,6 +286,11 @@ html {
         top: 90%;
         left: 30%;
         cursor: pointer;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$kyusyuOkinawaColor;
+        }
       }
     }
 
@@ -246,7 +305,7 @@ html {
       min-height: 100%;
       width: auto;
       height: auto;
-      background-color: rgb(88, 169, 184);
+      background-color: var.$overlayColor;
       opacity: 0.5;
       cursor: pointer;
     }
@@ -270,8 +329,7 @@ html {
         font-weight: bold;
         text-align: center;
         padding: 0.5em;
-        min-height: 50%;
-        background-color: rgb(241, 239, 239);
+        background-color: var.$prefBgColor;
         cursor: pointer;
         z-index: 111;
         animation-name: popup;
@@ -289,7 +347,10 @@ html {
       }
 
       .area {
+        text-align: left;
         min-width: 100%;
+        font-size: 2rem;
+        padding-left: 1.5rem;
         border-bottom: 1px solid rgb(122, 120, 120);
         margin-bottom: 5px;
       }
@@ -305,8 +366,17 @@ html {
           display: block;
           border: solid 2px #000;
           padding: 0.5rem 1rem;
-          font-size: 2.5vmin;
+          font-size: 2.2vh;
           font-weight: bold;
+
+          &:hover {
+            background-color: var.$subColor;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
         }
       }
     }
@@ -316,7 +386,7 @@ html {
 /**
   * タブレット端末レスポンシブ
   */
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 600px) and (max-width: 1024px) {
   #open {
     width: 200px;
     border: 1px solid #ccc;
@@ -356,15 +426,25 @@ html {
     z-index: 1;
     box-sizing: border-box;
     margin: 0 auto;
-    min-width: 100%;
-    background-color: #adf6ff;
+    min-width: 70%;
+    background-color: var.$mapColor;
 
     .map-header {
       display: none;
     }
 
+    .information {
+      color: var.$subColor;
+      font-weight: bold;
+      padding: 5px 10px;
+    }
+
     .guidance {
-      display: none;
+      background-color: var.$subColor;
+      text-align: center;
+      width: 100%;
+      font-weight: bold;
+      padding: 5px 0;
     }
 
     .map {
@@ -388,7 +468,7 @@ html {
       z-index: 1;
       box-sizing: border-box;
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var.$subColor;
       padding: 0.2rem 0.5rem;
       font-size: 2rem;
       font-weight: bold;
@@ -397,6 +477,11 @@ html {
       top: 5%;
       right: 32%;
       cursor: pointer;
+
+      &:hover {
+        color: var.$subColor;
+        background-color: var.$hokkaidoColor;
+      }
     }
 
     .area2 {
@@ -407,7 +492,7 @@ html {
       box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var.$subColor;
       padding: 0.2rem 0.5rem;
       font-size: 2rem;
       font-weight: bold;
@@ -415,6 +500,11 @@ html {
       white-space: nowrap;
       top: 40%;
       right: 6%;
+
+      &:hover {
+        color: var.$subColor;
+        background-color: var.$tohokuColor;
+      }
     }
 
     .area3 {
@@ -425,7 +515,7 @@ html {
       box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var.$subColor;
       padding: 0.2rem 0.5rem;
       font-size: 2rem;
       font-weight: bold;
@@ -433,6 +523,11 @@ html {
       white-space: nowrap;
       top: 60%;
       right: 10%;
+
+      &:hover {
+        color: var.$subColor;
+        background-color: var.$kantoColor;
+      }
     }
 
     .area4 {
@@ -443,7 +538,7 @@ html {
       box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var.$subColor;
       padding: 0.2rem 0.5rem;
       font-size: 2rem;
       font-weight: bold;
@@ -451,6 +546,11 @@ html {
       white-space: nowrap;
       top: 42%;
       right: 38%;
+
+      &:hover {
+        color: var.$subColor;
+        background-color: var.$chubuColor;
+      }
     }
 
     .area5 {
@@ -461,7 +561,7 @@ html {
       box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var.$subColor;
       padding: 0.2rem 0.5rem;
       font-size: 2rem;
       font-weight: bold;
@@ -469,6 +569,11 @@ html {
       white-space: nowrap;
       top: 80%;
       right: 32%;
+
+      &:hover {
+        color: var.$subColor;
+        background-color: var.$kinkiColor;
+      }
     }
 
     .area6 {
@@ -479,7 +584,7 @@ html {
       box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var.$subColor;
       padding: 0.2rem 0.5rem;
       font-size: 2rem;
       font-weight: bold;
@@ -487,6 +592,11 @@ html {
       white-space: nowrap;
       top: 86%;
       left: 36%;
+
+      &:hover {
+        color: var.$subColor;
+        background-color: var.$shikokuColor;
+      }
     }
 
     .area7 {
@@ -497,7 +607,7 @@ html {
       box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var.$subColor;
       padding: 0.2rem 0.5rem;
       font-size: 2rem;
       font-weight: bold;
@@ -505,6 +615,11 @@ html {
       white-space: nowrap;
       top: 54%;
       left: 22%;
+
+      &:hover {
+        color: var.$subColor;
+        background-color: var.$chugokuColor;
+      }
     }
 
     .area8 {
@@ -515,15 +630,19 @@ html {
       box-sizing: border-box;
       cursor: pointer;
       border-radius: 5px;
-      background-color: #fff;
+      background-color: var.$subColor;
       padding: 0.2rem 0.5rem;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: bold;
       text-align: center;
       white-space: nowrap;
       top: 76%;
-      left: 2%;
-      font-size: 0.8rem;
+      left: 1%;
+
+      &:hover {
+        color: var.$subColor;
+        background-color: var.$kyusyuOkinawaColor;
+      }
     }
 
     /* オーバーレイ */
@@ -537,7 +656,7 @@ html {
       min-height: 100%;
       width: auto;
       height: auto;
-      background-color: rgb(88, 169, 184);
+      background-color: var.$overlayColor;
       opacity: 0.5;
       cursor: pointer;
     }
@@ -549,10 +668,9 @@ html {
       /* 地域毎の都道府県リスト */
       .pref_list {
         position: absolute;
-        background-color: rgb(241, 239, 239);
+        background-color: var.$prefBgColor;
         box-sizing: border-box;
         width: 50%;
-        height: 50%;
         top: 0%;
         left: 0%;
         z-index: 1;
@@ -561,7 +679,6 @@ html {
         font-weight: bold;
         text-align: center;
         padding: 0.5em;
-        min-height: 50%;
         cursor: pointer;
         z-index: 111;
         animation-name: popup;
@@ -579,8 +696,10 @@ html {
       }
 
       .area {
+        text-align: left;
         min-width: 100%;
         font-size: 2rem;
+        padding-left: 1.5rem;
         border-bottom: 1px solid rgb(122, 120, 120);
         margin-bottom: 5px;
       }
@@ -598,6 +717,15 @@ html {
           padding: 0.5rem 1rem;
           font-size: 2.2vh;
           font-weight: bold;
+
+          &:hover {
+            background-color: var.$subColor;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: #000;
         }
       }
     }
@@ -607,7 +735,7 @@ html {
 /**
   * PCレスポンシブ
   */
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1025px) {
   #open {
     width: 200px;
     border: 1px solid #ccc;
@@ -646,15 +774,24 @@ html {
     z-index: 1;
     box-sizing: border-box;
     margin: 0 auto;
-    min-width: 100%;
-    background-color: #adf6ff;
+    background-color: var.$mapColor;
 
     .map-header {
       display: none;
     }
 
+    .information {
+      color: var.$subColor;
+      font-weight: bold;
+      padding: 5px 10px;
+    }
+
     .guidance {
-      display: none;
+      background-color: var.$subColor;
+      text-align: center;
+      width: 100%;
+      font-weight: bold;
+      padding: 5px 0;
     }
 
     .map {
@@ -670,6 +807,10 @@ html {
         width: 100%;
       }
 
+      .area_btn:hover {
+        background-color: var.$subColor;
+      }
+
       /* ボタン配置（使用する日本地図画像により微調整） */
       .area1 {
         position: absolute;
@@ -678,7 +819,7 @@ html {
         z-index: 1;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         font-size: 2rem;
@@ -687,6 +828,11 @@ html {
         white-space: nowrap;
         top: 5%;
         right: 32%;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$hokkaidoColor;
+        }
       }
 
       .area2 {
@@ -696,7 +842,7 @@ html {
         z-index: 1;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         font-size: 2rem;
@@ -705,6 +851,11 @@ html {
         white-space: nowrap;
         top: 40%;
         right: 6%;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$tohokuColor;
+        }
       }
 
       .area3 {
@@ -714,7 +865,7 @@ html {
         z-index: 1;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         font-size: 2rem;
@@ -723,6 +874,11 @@ html {
         white-space: nowrap;
         top: 60%;
         right: 10%;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$kantoColor;
+        }
       }
 
       .area4 {
@@ -732,7 +888,7 @@ html {
         z-index: 1;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         font-size: 2rem;
@@ -741,6 +897,11 @@ html {
         white-space: nowrap;
         top: 42%;
         right: 38%;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$chubuColor;
+        }
       }
 
       .area5 {
@@ -750,7 +911,7 @@ html {
         z-index: 1;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         font-size: 2rem;
@@ -759,6 +920,11 @@ html {
         white-space: nowrap;
         top: 80%;
         right: 32%;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$kinkiColor;
+        }
       }
 
       .area6 {
@@ -768,7 +934,7 @@ html {
         z-index: 1;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         font-size: 2rem;
@@ -777,6 +943,11 @@ html {
         white-space: nowrap;
         top: 86%;
         left: 36%;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$shikokuColor;
+        }
       }
 
       .area7 {
@@ -786,7 +957,7 @@ html {
         z-index: 1;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         font-size: 2rem;
@@ -795,6 +966,11 @@ html {
         white-space: nowrap;
         top: 54%;
         left: 22%;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$chugokuColor;
+        }
       }
 
       .area8 {
@@ -804,7 +980,7 @@ html {
         z-index: 1;
         box-sizing: border-box;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: var.$subColor;
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         font-weight: bold;
@@ -812,7 +988,12 @@ html {
         white-space: nowrap;
         top: 76%;
         left: 2%;
-        font-size: 1rem;
+        font-size: 1.4rem;
+
+        &:hover {
+          color: var.$subColor;
+          background-color: var.$kyusyuOkinawaColor;
+        }
       }
     }
 
@@ -826,7 +1007,7 @@ html {
       min-height: 100%;
       width: auto;
       height: auto;
-      background-color: rgb(88, 169, 184);
+      background-color: var.$overlayColor;
       opacity: 0.5;
       cursor: pointer;
     }
@@ -847,10 +1028,9 @@ html {
         border: 1px solid #ccc;
         font-weight: bold;
         text-align: center;
-        padding: 0.5em;
+        padding: 0.5rem;
         width: 50%;
-        max-height: 50%;
-        background-color: rgb(241, 239, 239);
+        background-color: var.$prefBgColor;
         cursor: pointer;
         z-index: 111;
         animation-name: popup;
@@ -867,8 +1047,10 @@ html {
         }
 
         .area {
+          text-align: left;
           min-width: 100%;
           font-size: 2rem;
+          padding-left: 1.5rem;
           border-bottom: 1px solid rgb(122, 120, 120);
           margin-bottom: 5px;
         }
@@ -886,6 +1068,15 @@ html {
             padding: 0.5rem 1rem;
             font-size: 2.2vh;
             font-weight: bold;
+
+            &:hover {
+              background-color: var.$subColor;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: #000;
           }
         }
       }
