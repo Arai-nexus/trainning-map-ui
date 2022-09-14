@@ -1,0 +1,297 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+  #open {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px;
+    margin: 16px auto 0;
+    background: #c7550a;
+    color: white;
+    top: 30%;
+    cursor: pointer;
+  }
+  #open .hidden {
+    display: none;
+  }
+  /* モーダル背面 */
+  #mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-color: #111;
+    opacity: 0.5;
+    z-index: -1;
+    cursor: pointer;
+  }
+  #mask .hidden {
+    display: none;
+  }
+  /* 日本地図DOM */
+  #japan_map {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    z-index: 1;
+    box-sizing: border-box;
+    margin: 0 auto;
+    min-width: 100%;
+    background-color: #adf6ff;
+    /* オーバーレイ */
+    /* 選択前は表示を隠す */
+  }
+  #japan_map .map-header {
+    background: #c7550a;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  #japan_map .guidance {
+    text-align: center;
+    background: #fff;
+  }
+  #japan_map .map {
+    position: relative;
+    margin: 0 auto;
+    max-width: 680px;
+    /* スマホで見たときは"sp"のclassがついた画像が表示される */
+    /* 日本地図ボタン */
+    /* ボタン配置（使用する日本地図画像により微調整） */
+  }
+  #japan_map .map .sp {
+    width: 100%;
+  }
+  #japan_map .map .pc {
+    display: none;
+  }
+  #japan_map .map .area1 {
+    position: absolute;
+    color: rgb(138, 125, 175);
+    border: solid 3px rgb(138, 125, 175);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 5%;
+    right: 40%;
+    cursor: pointer;
+  }
+  #japan_map .map .area2 {
+    position: absolute;
+    color: rgb(100, 155, 207);
+    border: solid 3px rgb(100, 155, 207);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 30%;
+    right: 8%;
+    cursor: pointer;
+  }
+  #japan_map .map .area3 {
+    position: absolute;
+    color: rgb(6, 151, 6);
+    border: solid 3px rgb(6, 151, 6);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 53%;
+    right: 14%;
+    cursor: pointer;
+  }
+  #japan_map .map .area4 {
+    position: absolute;
+    color: rgb(77, 192, 24);
+    border: solid 3px rgb(77, 192, 24);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 34%;
+    left: 34%;
+    cursor: pointer;
+  }
+  #japan_map .map .area5 {
+    position: absolute;
+    color: rgb(218, 187, 49);
+    border: solid 3px rgb(218, 187, 49);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 66%;
+    right: 40%;
+    cursor: pointer;
+  }
+  #japan_map .map .area6 {
+    position: absolute;
+    color: rgb(233, 147, 187);
+    border: solid 3px rgb(233, 147, 187);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 75%;
+    left: 26%;
+    cursor: pointer;
+  }
+  #japan_map .map .area7 {
+    position: absolute;
+    color: rgb(245, 172, 14);
+    border: solid 3px rgb(245, 172, 14);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 48%;
+    left: 6%;
+    cursor: pointer;
+  }
+  #japan_map .map .area8 {
+    position: absolute;
+    color: rgb(230, 113, 109);
+    border: solid 3px rgb(230, 113, 109);
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    top: 90%;
+    left: 30%;
+    cursor: pointer;
+  }
+  #japan_map .area_overlay {
+    display: none;
+    position: absolute;
+    /* z-index: 2; */
+    top: 0%;
+    left: 0%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-color: rgb(88, 169, 184);
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  #japan_map .pref_area {
+    display: none;
+  }
+  #japan_map .pref_area .pref_list {
+    /* 地域毎の都道府県リスト */
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    z-index: 1;
+    /* display: -webkit-flex;
+          display: flex;
+          -webkit-flex-wrap: wrap; */
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5em;
+    min-height: 50%;
+    background-color: rgb(241, 239, 239);
+    cursor: pointer;
+    z-index: 111;
+    -webkit-animation-name: popup;
+            animation-name: popup;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+  }
+  @-webkit-keyframes popup {
+    from {
+      transform: translate(-50%, -100%); /* 要素を上の枠外に移動*/
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes popup {
+    from {
+      transform: translate(-50%, -100%); /* 要素を上の枠外に移動*/
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  #japan_map .pref_area .area {
+    min-width: 100%;
+    border-bottom: 1px solid rgb(122, 120, 120);
+    margin-bottom: 5px;
+  }
+  #japan_map .pref_area .grid {
+    display: grid;
+    justify-content: space-around;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0;
+  }
+  #japan_map .pref_area .grid .prefecture {
+    display: block;
+    border: solid 2px #000;
+    padding: 0.5rem 1rem;
+    font-size: 3vmin;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=sample-sp.css.map */
