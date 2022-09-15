@@ -77,16 +77,14 @@ html {
     color: #fff;
     font-size: 2rem;
     font-weight: bold;
-    vertical-align: center;
-    padding: 0 1.2rem;
+    padding: 1rem 1.2rem;
   }
   #japan_map .map-header #close {
     display: inline-block;
     color: #fff;
     font-size: 2rem;
     font-weight: bold;
-    vertical-align: center;
-    padding: 0 1.2rem;
+    padding: 1rem 1.2rem;
   }
   #japan_map .guidance {
     background-color: #fff;
