@@ -63,7 +63,7 @@ html {
     margin: auto;
     z-index: 1;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: auto;
     min-width: 100%;
     object-fit: scale-down;
     background-color: var.$mapColor;
@@ -1055,10 +1055,11 @@ html {
         .area {
           text-align: left;
           min-width: 100%;
-          font-size: 2rem;
+          font-size: 1.7rem;
           padding-left: 1.5rem;
           border-bottom: 1px solid rgb(122, 120, 120);
           margin-bottom: 5px;
+          white-space: nowrap;
         }
 
         .grid {
