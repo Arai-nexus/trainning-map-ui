@@ -64,7 +64,8 @@ html {
     z-index: 1;
     box-sizing: border-box;
     margin: 0 auto;
-    min-width: 90%;
+    min-width: 100%;
+    object-fit: scale-down;
     background-color: var.$mapColor;
 
     .map-header {
@@ -73,7 +74,11 @@ html {
       justify-content: space-between;
       z-index: 1;
 
-      .close {
+      #close {
+        color: var.$subColor;
+        font-size: 15px;
+        font-weight: bold;
+        padding-right: 5px;
       }
     }
 
@@ -100,7 +105,7 @@ html {
     .map {
       position: relative;
       margin: 0 auto;
-      max-width: 680px;
+      max-width: 450px;
 
       /* スマホで見たときは"sp"のclassがついた画像が表示される */
       .sp {
@@ -283,8 +288,8 @@ html {
         font-weight: bold;
         text-align: center;
         white-space: nowrap;
-        top: 90%;
-        left: 30%;
+        top: 88%;
+        left: 26%;
         cursor: pointer;
 
         &:hover {
@@ -426,7 +431,8 @@ html {
     z-index: 1;
     box-sizing: border-box;
     margin: 0 auto;
-    min-width: 70%;
+    min-width: 450px;
+    max-width: 70%;
     background-color: var.$mapColor;
 
     .map-header {

@@ -36,6 +36,12 @@ $(function () {
     $("#mask").hide();
   });
 
+  $("#close").click(() => {
+    $("#open").show();
+    $("#japan_map").hide();
+    $("#mask").hide();
+  });
+
   //地域を選択
   $(".area_btn").click(function () {
     $(".area_overlay").show();

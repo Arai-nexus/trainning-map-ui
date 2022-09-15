@@ -59,7 +59,9 @@ html {
     z-index: 1;
     box-sizing: border-box;
     margin: 0 auto;
-    min-width: 90%;
+    min-width: 100%;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
     background-color: rgb(248, 255, 239);
     /* オーバーレイ */
     /* 選択前は表示を隠す */
@@ -69,6 +71,12 @@ html {
     display: flex;
     justify-content: space-between;
     z-index: 1;
+  }
+  #japan_map .map-header #close {
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 5px;
   }
   #japan_map .information {
     color: #fff;
@@ -90,7 +98,7 @@ html {
   #japan_map .map {
     position: relative;
     margin: 0 auto;
-    max-width: 680px;
+    max-width: 450px;
     /* スマホで見たときは"sp"のclassがついた画像が表示される */
     /* 日本地図ボタン */
     /* ボタン配置（使用する日本地図画像により微調整） */
@@ -256,8 +264,8 @@ html {
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    top: 90%;
-    left: 30%;
+    top: 88%;
+    left: 26%;
     cursor: pointer;
   }
   #japan_map .map .area8:hover {
@@ -393,7 +401,8 @@ html {
     z-index: 1;
     box-sizing: border-box;
     margin: 0 auto;
-    min-width: 70%;
+    min-width: 450px;
+    max-width: 70%;
     background-color: rgb(248, 255, 239);
     /* ボタン配置（使用する日本地図画像により微調整） */
     /* オーバーレイ */
