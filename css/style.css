@@ -72,21 +72,17 @@ html {
     justify-content: space-between;
     z-index: 1;
   }
+  #japan_map .map-header .information {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+  }
   #japan_map .map-header #close {
     color: #fff;
-    font-size: 15px;
+    font-size: 2rem;
     font-weight: bold;
-    padding-right: 5px;
-  }
-  #japan_map .information {
-    color: #fff;
-    font-weight: bold;
-    padding: 5px 10px;
-  }
-  #japan_map .information {
-    color: #fff;
-    font-weight: bold;
-    padding: 5px 10px;
+    padding-right: 1.2rem;
   }
   #japan_map .guidance {
     background-color: #fff;
@@ -110,40 +106,41 @@ html {
     display: none;
   }
   #japan_map .map .area_btn:hover {
-    background-color: #fff;
+    background-color: #000;
   }
   #japan_map .map .area1 {
-    position: absolute;
     color: rgb(138, 125, 175);
     border: solid 3px rgb(138, 125, 175);
+    background-color: #fff;
+    position: absolute;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 4vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
     top: 5%;
     right: 40%;
-    cursor: pointer;
   }
   #japan_map .map .area1:hover {
     color: #fff;
     background-color: rgb(138, 125, 175);
   }
   #japan_map .map .area2 {
-    position: absolute;
     color: rgb(100, 155, 207);
     border: solid 3px rgb(100, 155, 207);
+    background-color: #fff;
+    position: absolute;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 4vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
     top: 30%;
     right: 8%;
     cursor: pointer;
@@ -153,17 +150,18 @@ html {
     background-color: rgb(100, 155, 207);
   }
   #japan_map .map .area3 {
-    position: absolute;
     color: rgb(6, 151, 6);
     border: solid 3px rgb(6, 151, 6);
+    background-color: #fff;
+    position: absolute;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 4vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
     top: 53%;
     right: 14%;
     cursor: pointer;
@@ -173,17 +171,18 @@ html {
     background-color: rgb(6, 151, 6);
   }
   #japan_map .map .area4 {
-    position: absolute;
     color: rgb(77, 192, 24);
     border: solid 3px rgb(77, 192, 24);
+    background-color: #fff;
+    position: absolute;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 4vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
     top: 34%;
     left: 34%;
     cursor: pointer;
@@ -193,17 +192,18 @@ html {
     background-color: rgb(77, 192, 24);
   }
   #japan_map .map .area5 {
-    position: absolute;
     color: rgb(218, 187, 49);
     border: solid 3px rgb(218, 187, 49);
+    background-color: #fff;
+    position: absolute;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 4vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
     top: 66%;
     right: 40%;
     cursor: pointer;
@@ -213,17 +213,18 @@ html {
     background-color: rgb(218, 187, 49);
   }
   #japan_map .map .area6 {
-    position: absolute;
     color: rgb(233, 147, 187);
     border: solid 3px rgb(233, 147, 187);
+    background-color: #fff;
+    position: absolute;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #fff;
     padding: 0.2rem 0.5rem;
     font-size: 4vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
     top: 75%;
     left: 26%;
     cursor: pointer;
@@ -233,17 +234,18 @@ html {
     background-color: rgb(233, 147, 187);
   }
   #japan_map .map .area7 {
-    position: absolute;
     color: rgb(245, 172, 14);
     border: solid 3px rgb(245, 172, 14);
+    background-color: #fff;
+    position: absolute;
     box-sizing: border-box;
     border-radius: 5px;
-    background-color: #fff;
     padding: 0.2rem 0.5rem;
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
+    cursor: pointer;
     top: 46%;
     left: 4%;
     cursor: pointer;
@@ -253,17 +255,9 @@ html {
     background-color: rgb(245, 172, 14);
   }
   #japan_map .map .area8 {
-    position: absolute;
     color: rgb(230, 113, 109);
     border: solid 3px rgb(230, 113, 109);
-    box-sizing: border-box;
-    border-radius: 5px;
     background-color: #fff;
-    padding: 0.2rem 0.5rem;
-    font-size: 4vw;
-    font-weight: bold;
-    text-align: center;
-    white-space: nowrap;
     top: 88%;
     left: 26%;
     cursor: pointer;
