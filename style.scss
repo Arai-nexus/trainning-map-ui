@@ -77,14 +77,14 @@ html {
 
       .information {
         color: var.$subColor;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: bold;
         padding: 0.5rem 1.2rem;
       }
 
       #close {
         color: var.$subColor;
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bold;
         padding-right: 1.2rem;
       }
@@ -226,7 +226,7 @@ html {
         color: var.$kyusyuOkinawaColor;
         border: solid 3px var.$kyusyuOkinawaColor;
         background-color: var.$subColor;
-        // @include mix.areaSpRayout;
+        @include mix.areaSpRayout;
         top: 88%;
         left: 26%;
         cursor: pointer;

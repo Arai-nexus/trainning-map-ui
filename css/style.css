@@ -74,13 +74,13 @@ html {
   }
   #japan_map .map-header .information {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     padding: 0.5rem 1.2rem;
   }
   #japan_map .map-header #close {
     color: #fff;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     padding-right: 1.2rem;
   }
@@ -258,6 +258,15 @@ html {
     color: rgb(230, 113, 109);
     border: solid 3px rgb(230, 113, 109);
     background-color: #fff;
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0.2rem 0.5rem;
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
     top: 88%;
     left: 26%;
     cursor: pointer;
