@@ -73,23 +73,32 @@ html {
     z-index: 1;
   }
   #japan_map .map-header .information {
+    display: inline-block;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    padding: 0.5rem 1.2rem;
+    vertical-align: center;
+    padding: 0 1.2rem;
   }
   #japan_map .map-header #close {
+    display: inline-block;
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
-    padding-right: 1.2rem;
+    vertical-align: center;
+    padding: 0 1.2rem;
   }
   #japan_map .guidance {
     background-color: #fff;
     text-align: center;
     width: 100%;
     font-weight: bold;
+    vertical-align: center;
     padding: 5px 0;
+  }
+  #japan_map .guidance .reverse {
+    display: inline-block;
+    transform: scaleX(-1);
   }
   #japan_map .map {
     position: relative;
@@ -426,6 +435,10 @@ html {
     font-weight: bold;
     padding: 5px 0;
   }
+  #japan_map .guidance .reverse {
+    display: inline-block;
+    transform: scaleX(-1);
+  }
   #japan_map .map {
     position: relative;
     margin: 0 auto;
@@ -749,6 +762,10 @@ html {
     width: 100%;
     font-weight: bold;
     padding: 5px 0;
+  }
+  #japan_map .guidance .reverse {
+    display: inline-block;
+    transform: scaleX(-1);
   }
   #japan_map .map {
     position: relative;
