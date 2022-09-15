@@ -13,6 +13,10 @@ html {
   justify-content: space-between;
 }
 
+.active {
+  background-color: var.$hoverColor;
+}
+
 /**
   * SPレスポンシブ
   */
@@ -127,6 +131,7 @@ html {
       /* 日本地図ボタン */
       /* ボタン配置（使用する日本地図画像により微調整） */
       .area1 {
+        position: relative;
         color: var.$hokkaidoColor;
         border: solid 3px var.$hokkaidoColor;
         background-color: var.$subColor;
@@ -138,6 +143,23 @@ html {
           color: var.$subColor;
           background-color: var.$hokkaidoColor;
         }
+      }
+
+      .area1-line {
+        position: fixed;
+        top: 30%;
+        right: 40%;
+        font-size: 15px;
+        color: var.$hokkaidoColor;
+        width: 10px;
+        height: 10px;
+        background-image: linear-gradient(
+          45deg,
+          transparent 51%,
+          black 51%,
+          black 52%,
+          transparent 52%
+        );
       }
 
       .area2 {
@@ -316,14 +338,20 @@ html {
 
         .prefecture {
           display: block;
-          border: solid 2px #000;
+          border: solid 1px #000;
+          border-radius: 5px;
           padding: 0.5rem 1rem;
           font-size: 2.2vh;
           font-weight: bold;
 
-          &:hover {
-            background-color: var.$subColor;
-          }
+          // &:hover {
+          //   background-color: var.$hoverColor;
+          // }
+
+          // &:not(.active):hover {
+          //   opacity: 0.5;
+          //   transition: opacity 0.4s;
+          // }
         }
 
         a {
@@ -671,20 +699,21 @@ html {
 
         .prefecture {
           display: block;
-          border: solid 2px #000;
+          border: solid 1px #000;
+          border-radius: 5px;
           padding: 0.5rem 1rem;
           font-size: 2.2vh;
           font-weight: bold;
 
           &:hover {
-            background-color: var.$subColor;
+            background-color: var.$hoverColor;
           }
         }
+      }
 
-        a {
-          text-decoration: none;
-          color: #000;
-        }
+      a {
+        text-decoration: none;
+        color: #000;
       }
     }
   }
@@ -1028,13 +1057,14 @@ html {
 
           .prefecture {
             display: block;
-            border: solid 2px #000;
+            border: solid 1px #000;
+            border-radius: 5px;
             padding: 0.5rem 1rem;
             font-size: 2.2vh;
             font-weight: bold;
 
             &:hover {
-              background-color: var.$subColor;
+              background-color: var.$hoverColor;
             }
           }
 

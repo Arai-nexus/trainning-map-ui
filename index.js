@@ -1,4 +1,5 @@
 "use strict";
+
 // {
 //   const open = document.getElementById("open");
 //   const modal = document.getElementById("modal");
@@ -30,7 +31,7 @@ $(function () {
   //   modal.classList.add("hidden");
   //   mask.classList.add("hidden");
   // });
-  $("#mask").click(() => {
+  $("#mask").click((e) => {
     $("#open").show();
     $("#japan_map").hide();
     $("#mask").hide();
@@ -56,16 +57,19 @@ $(function () {
     prefReset();
   });
 
+  // const dataId = document.querySelector("[.data-id]");
+  // console.log(dataId);
   //都道府県をクリック
-  $(".pref_list [data-id]").click(function () {
+  $(".pref_list [data-id]").click(function (e) {
     if ($(this).data("id")) {
       let id = $(this).data("id");
       //このidを使用して行いたい操作をしてください
       //都道府県IDに応じて別ページに飛ばしたい場合はこんな風に書く↓
       //   window.location.href = "https://kinocolog.com/pref/" + id;
-
-      prefReset();
+      $(this).toggleClass("active");
+      // prefReset();
     }
+    // $(this).removeClass("active");
   });
 
   //表示リセット
@@ -75,3 +79,12 @@ $(function () {
     $(".area_overlay").hide();
   }
 });
+
+let prefecture = document.querySelectorAll(".prefecture");
+console.log(prefecture);
+for (let i = 0; i < prefecture.length; i++) {
+  prefecture[i].addEventListener("click", function () {
+    console.log(i);
+    this.classList.toggle(".active");
+  });
+}
