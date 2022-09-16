@@ -27,9 +27,10 @@ $(function () {
     $("#mask").show();
   });
 
-  // mask.addEventListener("click", function () {
+  // mask.addEventListener("click", function (e) {
   //   modal.classList.add("hidden");
   //   mask.classList.add("hidden");
+  //   $("#japan_map").hide();
   // });
   $("#mask").click((e) => {
     $("#open").show();
@@ -66,7 +67,7 @@ $(function () {
       //このidを使用して行いたい操作をしてください
       //都道府県IDに応じて別ページに飛ばしたい場合はこんな風に書く↓
       //   window.location.href = "https://kinocolog.com/pref/" + id;
-      $(this).toggleClass("active");
+      // $(this).toggleClass("active");
       // prefReset();
     }
     // $(this).removeClass("active");
@@ -80,11 +81,54 @@ $(function () {
   }
 });
 
-let prefecture = document.querySelectorAll(".prefecture");
-console.log(prefecture);
-for (let i = 0; i < prefecture.length; i++) {
-  prefecture[i].addEventListener("click", function () {
-    console.log(i);
-    this.classList.toggle(".active");
-  });
-}
+let prefList = document.querySelectorAll(".pref_list");
+// console.log(prefList[1].dataset.list);
+
+// 都道府県のDOM要素取得
+// let prefecture = document.querySelectorAll(".prefecture");
+
+// 配列の初期化
+let selectedPrefs = [];
+
+// 都道府県のクリックされた箇所をカウント
+// for (let i = 0; i < prefecture.length; i++) {
+//   prefecture[i].addEventListener("click", function (e) {
+//     // もしdata-pref-idが含まれていなかったら
+//     if (!selectedPrefs.includes(this.dataset.prefId)) {
+//       // 選択した都道府県が３つ以内なら
+//       if (selectedPrefs.length < 3) {
+//         this.classList.add("active");
+//         selectedPrefs.push(this.dataset.prefId);
+//       } else {
+//         e.preventDefault();
+//         alert("3都道府県まで選択できます。");
+//       }
+//     } else {
+//       this.classList.remove("active");
+//       // 配列に格納
+//       selectedPrefs = selectedPrefs.filter((element) => {
+//         return element != this.dataset.prefId;
+//       });
+//     }
+//   });
+// }
+
+let prefecture = $(".prefecture");
+prefecture.click(function (e) {
+  if (!selectedPrefs.includes(this.dataset.prefId)) {
+    // 選択した都道府県が３つ以内なら
+    if (selectedPrefs.length < 3) {
+      this.classList.add("active");
+      selectedPrefs.push(this.dataset.prefId);
+    } else {
+      e.preventDefault();
+      alert("3都道府県まで選択できます。");
+    }
+  } else {
+    this.classList.remove("active");
+    // 配列に格納
+    selectedPrefs = selectedPrefs.filter((element) => {
+      return element != this.dataset.prefId;
+    });
+  }
+});

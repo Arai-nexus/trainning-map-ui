@@ -29,7 +29,7 @@ html {
     padding: 12px;
     margin: 16px auto 0;
     background: var.$mainColor;
-    color: white;
+    color: $subColor;
     top: 30%;
     cursor: pointer;
 
@@ -142,6 +142,9 @@ html {
         &:hover {
           color: var.$subColor;
           background-color: var.$hokkaidoColor;
+        }
+
+        &.actibe {
         }
       }
 
