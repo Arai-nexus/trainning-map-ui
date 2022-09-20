@@ -89,6 +89,7 @@ let prefList = document.querySelectorAll(".pref_list");
 
 // 配列の初期化
 let selectedPrefs = [];
+let prefLists = [];
 
 // 都道府県のクリックされた箇所をカウント
 // for (let i = 0; i < prefecture.length; i++) {
@@ -114,12 +115,21 @@ let selectedPrefs = [];
 // }
 
 let prefecture = $(".prefecture");
+let selectedLists = document.getElementById("selected-list");
+
 prefecture.click(function (e) {
   if (!selectedPrefs.includes(this.dataset.prefId)) {
     // 選択した都道府県が３つ以内なら
     if (selectedPrefs.length < 3) {
       this.classList.add("active");
       selectedPrefs.push(this.dataset.prefId);
+
+      let prefLists = document.createElement("li");
+      prefLists.innerText = this.innerText;
+      console.log(prefLists);
+      selectedLists.appendChild(prefLists);
+      // prefLists.push(this.innerText);
+      // selectedLists.appendChild(prefLists);
     } else {
       e.preventDefault();
       alert("3都道府県まで選択できます。");
@@ -130,5 +140,11 @@ prefecture.click(function (e) {
     selectedPrefs = selectedPrefs.filter((element) => {
       return element != this.dataset.prefId;
     });
+
+    // prefLists = prefLists.filter((list) => {
+    //   return list != this.innerText;
+    // });
+
+    // selectedLists.removeChild(prefList);
   }
 });
