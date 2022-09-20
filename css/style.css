@@ -11,10 +11,6 @@ html {
   justify-content: space-between;
 }
 
-.active {
-  background-color: red;
-}
-
 #selected-list {
   position: absolute;
   top: 80%;
@@ -152,13 +148,13 @@ html {
   }
   #japan_map .map .area1-line {
     position: fixed;
-    top: 30%;
-    right: 40%;
+    top: 100%;
+    right: 100%;
     font-size: 15px;
     color: #8886d9;
     width: 10px;
     height: 10px;
-    background-image: linear-gradient(45deg, transparent 51%, black 51%, black 52%, transparent 52%);
+    background-image: linear-gradient(45deg, transparent 51%, black 80%, black 80%, transparent 52%);
   }
   #japan_map .map .area2 {
     color: #649ace;
@@ -379,6 +375,10 @@ html {
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
     padding: 5px 0;
+  }
+  #japan_map .pref_area .grid .area-color__hokkaido:active {
+    color: #fff;
+    background-color: #8886d9;
   }
   #japan_map .pref_area .grid .prefecture {
     display: block;

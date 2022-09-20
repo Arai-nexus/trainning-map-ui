@@ -13,9 +13,9 @@ html {
   justify-content: space-between;
 }
 
-.active {
-  background-color: var.$hoverColor;
-}
+// .active {
+//   background-color: var.$hoverColor;
+// }
 
 #selected-list {
   position: absolute;
@@ -154,15 +154,12 @@ html {
           color: var.$subColor;
           background-color: var.$hokkaidoColor;
         }
-
-        &.actibe {
-        }
       }
 
       .area1-line {
         position: fixed;
-        top: 30%;
-        right: 40%;
+        top: 100%;
+        right: 100%;
         font-size: 15px;
         color: var.$hokkaidoColor;
         width: 10px;
@@ -170,9 +167,9 @@ html {
         background-image: linear-gradient(
           45deg,
           transparent 51%,
-          black 51%,
-          black 52%,
-          transparent 52%
+          black 80%,
+          black 80%,
+          transparent 52%,
         );
       }
 
@@ -350,6 +347,14 @@ html {
         grid-template-columns: 1fr 1fr;
         padding: 5px 0;
 
+        .area-color__hokkaido {
+          
+          &:active {
+            color: var.$subColor;
+            background-color: var.$hokkaidoColor;
+          }
+        }
+
         .prefecture {
           display: block;
           border: solid 1px #000;
@@ -357,10 +362,6 @@ html {
           padding: 0.5rem 1rem;
           font-size: 2.2vh;
           font-weight: bold;
-
-          // &:hover {
-          //   background-color: var.$hoverColor;
-          // }
 
           // &:not(.active):hover {
           //   opacity: 0.5;

@@ -113,38 +113,96 @@ let prefLists = [];
 //     }
 //   });
 // }
+let selectedLists = document.getElementById('selected-list');
 
 let prefecture = $(".prefecture");
-let selectedLists = document.getElementById("selected-list");
-
 prefecture.click(function (e) {
   if (!selectedPrefs.includes(this.dataset.prefId)) {
     // 選択した都道府県が３つ以内なら
     if (selectedPrefs.length < 3) {
       this.classList.add("active");
-      selectedPrefs.push(this.dataset.prefId);
-
+      // console.log(this.dataset.prefId);
+      selectedPrefs = { [this.dataset.prefId]: this.innerText };
+      console.log(selectedPrefs);
+    
+      // liクラスを作成
       let prefLists = document.createElement("li");
-      prefLists.innerText = this.innerText;
+      // liクラスのテキストに都道府県の”id：value”を代入
       console.log(prefLists);
+      prefLists.innerText = this.innerText;
+      // selectedListsの子要素にliクラスの都道府県を追加
       selectedLists.appendChild(prefLists);
-      // prefLists.push(this.innerText);
-      // selectedLists.appendChild(prefLists);
-    } else {
-      e.preventDefault();
-      alert("3都道府県まで選択できます。");
     }
-  } else {
-    this.classList.remove("active");
-    // 配列に格納
-    selectedPrefs = selectedPrefs.filter((element) => {
-      return element != this.dataset.prefId;
-    });
-
-    // prefLists = prefLists.filter((list) => {
-    //   return list != this.innerText;
-    // });
-
-    // selectedLists.removeChild(prefList);
   }
 });
+      // 
+    
+      // let prefLists = document.createElement("li");
+      // prefLists.innerText = this.innerText;
+      // selectedLists.appendChild(prefLists);
+    
+      // prefLists.push(this.innerText);
+      // selectedLists.appendChild(prefLists);
+    
+    
+    
+      // if (!selectedPrefs.indexOf(this.dataset.id) === -1) {
+      //   // 選択した都道府県が３つ以内なら
+      //   if (selectedPrefs.length < 3) {
+      //     // active付与
+      //     this.classList.add("active");
+    
+    
+      //     selectedPrefs = { [this.dataset.prefId]: this.innerText };
+      //     console.log(selectedPrefs);
+    
+
+
+
+        // 
+
+  // let prefLists = document.createElement("li");
+  // prefLists.innerText = this.innerText;
+  // selectedLists.appendChild(prefLists);
+
+  // prefLists.push(this.innerText);
+  // selectedLists.appendChild(prefLists);
+
+
+
+  // if (!selectedPrefs.indexOf(this.dataset.id) === -1) {
+  //   // 選択した都道府県が３つ以内なら
+  //   if (selectedPrefs.length < 3) {
+  //     // active付与
+  //     this.classList.add("active");
+
+
+  //     selectedPrefs = { [this.dataset.prefId]: this.innerText };
+  //     console.log(selectedPrefs);
+
+  //     let arr = Object.keys(selectedPrefs).map((e)=>({ key: e, value: obj[e] }));
+  //     console.log(arr);
+
+  //     // let arr = selectedPrefs.sort(function (a,b) {
+  //     //   return (a.[0] < b.[0]) ? -1 : 1;
+  //     // });
+  //     // console.log(result);
+        
+  //     // selectedPrefs.forEach(function (obj) {
+  //       // = obj[1]
+  //     // });
+
+  //     // liクラスを作成
+  //     let prefLists = document.createElement("li");
+  //     // liクラスのテキストに都道府県の”id：value”を代入
+  //     console.log(prefLists);
+  //     prefLists.innerText = this.innerText;
+  //     // selectedListsの子要素にliクラスの都道府県を追加
+  //     selectedLists.appendChild(prefLists);
+
+  //     // sort
+  //     selectedPrefs.sort();
+  //     console.log(selectedPrefs);
+
+  //     // prefLists.push(this.innerText);
+  //     // selectedLists.appendChild(prefLists);
